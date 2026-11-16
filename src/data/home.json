@@ -1,0 +1,13 @@
+{
+  "popular": ["sachet-kopi", "cup-plastik", "popok", "minyak-jelantah", "baterai", "kabel-charger", "kulit-pisang", "styrofoam"],
+  "steps": [
+    { "title": "Cari", "text": "Ketik nama barang yang ada di tanganmu, misalnya sachet kopi atau baterai." },
+    { "title": "Pahami", "text": "Lihat kategori, status daur ulang, dan dampaknya dalam satu kartu." },
+    { "title": "Pilah", "text": "Ikuti langkah kurangi, pakai ulang, olah, lalu serahkan ke tempat yang tepat." }
+  ],
+  "infoCards": [
+    { "icon": "Home", "title": "Sampah rumah tangga", "text": "Sebagian besar berasal dari dapur, kamar mandi, dan barang sehari-hari. Memilah dari rumah membuat pengolahan jadi lebih mudah." },
+    { "icon": "TriangleAlert", "title": "Salah pilah yang sering terjadi", "text": "Kemasan berlapis, tisu berminyak, dan plastik kotor sering tercampur dengan sampah yang sebenarnya bisa didaur ulang." },
+    { "icon": "ShieldAlert", "title": "Penanganan B3", "text": "Baterai, lampu, dan obat kedaluwarsa dipisahkan, disimpan dengan aman, lalu diserahkan lewat kanal resmi setempat." }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "jenis", "title": "Mengenal Jenis Sampah", "summary": "Organik, anorganik, B3, dan residu.", "icon": "Shapes", "accent": "organik",
+    "pages": [
+      { "title": "Apa itu sampah rumah tangga?", "mood": "happy", "say": "Halo, aku Pilo! Sampah rumah tangga adalah sisa barang yang kita pakai setiap hari, dari dapur sampai kamar mandi. Yuk kenali jenisnya dulu.", "points": ["Berasal dari kegiatan sehari-hari di rumah", "Jenisnya berbeda, jadi cara menanganinya juga berbeda", "Mengenali jenis adalah langkah pertama memilah"], "figure": [{ "icon": "Home", "label": "Rumah" }, { "icon": "Utensils", "label": "Dapur" }, { "icon": "Baby", "label": "Kamar mandi" }] },
+      { "title": "Organik", "mood": "happy", "say": "Sampah organik berasal dari makhluk hidup dan bisa membusuk, seperti sisa makanan, kulit buah, dan daun kering. Bisa diolah jadi kompos lho.", "points": ["Sisa makanan, kulit buah, sayur, daun", "Mudah membusuk dan bisa jadi kompos", "Pisahkan dari plastik agar tidak tercemar"], "figure": [{ "icon": "Banana", "label": "Kulit pisang" }, { "icon": "Leaf", "label": "Daun" }, { "icon": "Utensils", "label": "Sisa makanan" }] },
+      { "title": "Anorganik", "mood": "think", "say": "Sampah anorganik sulit membusuk, contohnya plastik, kertas, kaca, dan logam. Banyak yang bisa didaur ulang kalau bersih dan kering.", "points": ["Plastik, kertas, kaca, dan logam", "Bersihkan dan keringkan sebelum dikumpulkan", "Tidak semua jenis plastik diterima pengepul"], "figure": [{ "icon": "Milk", "label": "Botol" }, { "icon": "Box", "label": "Kardus" }, { "icon": "Beer", "label": "Kaleng" }] },
+      { "title": "B3 dan residu", "mood": "think", "say": "B3 adalah bahan berbahaya dan beracun, seperti baterai dan lampu. Residu adalah sisanya yang belum bisa diolah, misalnya popok. Keduanya punya jalur sendiri.", "points": ["B3: baterai, lampu, obat kedaluwarsa, kaleng semprot", "Residu: popok, puntung rokok, masker sekali pakai", "Aturan bisa berbeda di tiap daerah, cek DLH setempat"], "figure": [{ "icon": "BatteryLow", "label": "Baterai" }, { "icon": "Lightbulb", "label": "Lampu" }, { "icon": "Baby", "label": "Popok" }] }
+    ]
+  },
+  {
+    "id": "dampak", "title": "Dampak Sampah bagi Lingkungan", "summary": "Tanah, air, udara, dan makhluk hidup.", "icon": "Globe", "accent": "anorganik",
+    "pages": [
+      { "title": "Tanah", "mood": "think", "say": "Sampah yang menumpuk di tanah bisa merusak kualitas tanah. Plastik butuh waktu sangat lama untuk terurai dan akhirnya pecah jadi serpihan kecil.", "points": ["Plastik terurai sangat lama", "Cairan dari tumpukan sampah (lindi) bisa meresap ke tanah", "Logam dari B3 bisa mencemari tanah"], "figure": [{ "icon": "Mountain", "label": "Tanah" }, { "icon": "Package", "label": "Plastik" }] },
+      { "title": "Air", "mood": "oops", "say": "Sampah yang hanyut ke selokan akan menyumbat saluran dan bermuara ke sungai dan laut. Banjir dan air kotor bisa jadi akibatnya.", "points": ["Menyumbat selokan dan memicu banjir", "Mencemari sungai dan laut", "Minyak jelantah di saluran bisa membuat pipa mampet"], "figure": [{ "icon": "Waves", "label": "Sungai" }, { "icon": "Droplets", "label": "Air" }] },
+      { "title": "Udara", "mood": "oops", "say": "Membakar sampah menghasilkan asap yang tidak sehat dihirup. Sampah organik yang membusuk tanpa udara juga melepaskan gas metana.", "points": ["Asap pembakaran mengganggu pernapasan", "Metana dari sampah organik ikut memanaskan bumi", "Lebih baik dikompos atau diserahkan, bukan dibakar"], "figure": [{ "icon": "Wind", "label": "Udara" }, { "icon": "Flame", "label": "Asap" }] },
+      { "title": "Makhluk hidup", "mood": "oops", "say": "Hewan bisa tersangkut atau salah makan sampah. Dan serpihan plastik kecil bisa sampai ke rantai makanan. Kita juga ikut terdampak.", "points": ["Satwa bisa terjerat atau menelan sampah", "Mikroplastik dapat masuk ke rantai makanan", "Lingkungan kotor memengaruhi kesehatan manusia"], "figure": [{ "icon": "Fish", "label": "Ikan" }, { "icon": "Bird", "label": "Burung" }] }
+    ]
+  },
+  {
+    "id": "kelola", "title": "Cara Mengelola Sampah", "summary": "Kurangi, pakai ulang, daur ulang.", "icon": "Recycle", "accent": "b3",
+    "pages": [
+      { "title": "Urutan yang paling baik", "mood": "happy", "say": "Pengelolaan terbaik dimulai sebelum jadi sampah: kurangi dulu, pakai ulang, baru daur ulang. Jadi daur ulang bukan langkah pertama ya.", "points": ["Kurangi: pakai secukupnya", "Pakai ulang: manfaatkan lagi", "Daur ulang: olah menjadi bahan baru"], "figure": [{ "icon": "Minus", "label": "Kurangi" }, { "icon": "RefreshCw", "label": "Pakai ulang" }, { "icon": "Recycle", "label": "Daur ulang" }] },
+      { "title": "Pilah dari rumah", "mood": "happy", "say": "Sediakan minimal dua wadah: organik dan anorganik. Kalau ada ruang, tambah wadah untuk B3 dan residu. Memilah dari rumah itu paling efektif.", "points": ["Siapkan wadah terpisah dan beri label", "Bersihkan dan keringkan sampah anorganik", "Simpan B3 di wadah tertutup, jauh dari anak"], "figure": [{ "icon": "Trash2", "label": "Wadah" }, { "icon": "Tag", "label": "Label" }] },
+      { "title": "Olah dan serahkan", "mood": "think", "say": "Sampah organik bisa dikompos. Anorganik bersih bisa ke bank sampah atau pengepul. B3 diserahkan lewat kanal resmi. Cek dulu aturan di daerahmu ya.", "points": ["Organik: kompos atau biopori", "Anorganik bersih: bank sampah atau pengepul", "B3: ikuti prosedur DLH setempat"], "figure": [{ "icon": "Sprout", "label": "Kompos" }, { "icon": "Store", "label": "Bank sampah" }] }
+    ]
+  },
+  {
+    "id": "kebiasaan", "title": "Kebiasaan Ramah Lingkungan", "summary": "Langkah kecil yang bisa dimulai hari ini.", "icon": "Sprout", "accent": "residu",
+    "pages": [
+      { "title": "Bawa sendiri", "mood": "cheer", "say": "Mulai dari hal kecil: bawa tas belanja, tumbler, dan wadah makan sendiri. Barang yang tidak jadi sampah adalah yang paling mudah dikelola!", "points": ["Tas belanja dan tumbler", "Wadah makan sendiri", "Tolak sedotan dan kantong yang tidak perlu"], "figure": [{ "icon": "ShoppingBag", "label": "Tas" }, { "icon": "CupSoda", "label": "Tumbler" }] },
+      { "title": "Beli secukupnya", "mood": "happy", "say": "Beli sesuai kebutuhan, pilih kemasan isi ulang, dan rawat barang supaya awet. Makanan yang dihabiskan juga berarti sampah yang lebih sedikit.", "points": ["Buat daftar belanja", "Pilih produk isi ulang", "Perbaiki sebelum membuang"], "figure": [{ "icon": "ListChecks", "label": "Daftar" }, { "icon": "Wrench", "label": "Perbaiki" }] },
+      { "title": "Ajak orang sekitar", "mood": "cheer", "say": "Kebiasaan baik lebih kuat kalau dilakukan bersama. Ajak keluarga memilah, tanpa menyalahkan. Semua orang bisa belajar pelan-pelan.", "points": ["Mulai dari keluarga di rumah", "Beri contoh, bukan menghakimi", "Ikut kegiatan bank sampah di lingkunganmu"], "figure": [{ "icon": "Users", "label": "Keluarga" }, { "icon": "Heart", "label": "Peduli" }] }
+    ]
+  }
+]

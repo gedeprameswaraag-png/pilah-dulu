@@ -1,0 +1,99 @@
+/* ---------- Tombol ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border: 2.5px solid var(--ink); border-radius: 99px; font-weight: 700; text-decoration: none; background: var(--paper); color: var(--ink); box-shadow: var(--shadow-sm); transition: transform .15s var(--ease), box-shadow .15s var(--ease); }
+.btn:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.btn:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+.btn--primary { background: var(--moss); color: var(--cream); }
+.btn--pucuk { background: var(--pucuk); }
+.btn--ghost { background: transparent; box-shadow: none; }
+.btn--sm { padding: 8px 16px; font-size: .95rem; }
+.btn:disabled { opacity: .45; box-shadow: none; }
+.link-btn { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; padding: 4px 0; color: var(--moss); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Kartu, grid, chip, badge ---------- */
+.card { background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); }
+.grid { display: grid; gap: 18px; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.stack { display: grid; gap: 10px; }
+@media (max-width: 960px) { .grid--4 { grid-template-columns: repeat(2, 1fr); } .grid--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .grid--4, .grid--3 { grid-template-columns: 1fr; } }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 2px solid var(--ink); border-radius: 99px; background: var(--paper); color: var(--ink); text-decoration: none; font: 500 .9rem var(--font-mono); transition: background .15s, transform .15s; }
+.chip:hover { background: var(--pucuk); transform: translateY(-2px); }
+.chip--filter small { opacity: .7; }
+.chip--filter.is-active { background: var(--cat, var(--ink)); color: var(--cat-ink, var(--cream)); }
+
+.badge { display: inline-block; padding: 2px 10px; border-radius: 99px; border: 2px solid var(--ink); background: var(--cat); color: var(--cat-ink); font: 500 .78rem var(--font-mono); }
+.status { display: inline-block; padding: 2px 10px; border-radius: 99px; border: 2px solid var(--ink); font: 500 .78rem var(--font-mono); background: #fff; }
+.status--good { background: #DCEBE2; }
+.status--mid { background: #FFF1C9; }
+.status--bad { background: #E6E6E3; }
+
+/* ---------- Kartu item ---------- */
+.item-card { display: flex; gap: 14px; align-items: center; padding: 16px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); height: 100%; transition: transform .18s var(--ease), box-shadow .18s var(--ease); }
+.item-card:hover { transform: translate(-2px, -2px) rotate(-.4deg); box-shadow: var(--shadow); }
+.item-card__icon { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; border: 2.5px solid var(--ink); background: var(--cat-soft); color: var(--ink); }
+.item-card__body { display: grid; gap: 6px; min-width: 0; }
+.item-card__name { font: 500 1.02rem var(--font-mono); }
+.item-card__meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.item-card--compact { padding: 10px 14px; box-shadow: none; }
+
+/* ---------- Pencarian ---------- */
+.search { display: flex; align-items: center; gap: 10px; background: #fff; border: 2.5px solid var(--ink); border-radius: 18px; padding: 0 12px 0 16px; height: 56px; box-shadow: var(--shadow-sm); transition: box-shadow .2s; }
+.search:focus-within { box-shadow: 0 0 0 5px var(--pucuk), var(--shadow-sm); }
+.search input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font-size: 1.05rem; }
+.search input::-webkit-search-cancel-button { display: none; }
+.search__icon { flex: none; color: var(--moss); }
+.search__clear { flex: none; border: 0; background: rgba(31, 42, 36, .08); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; }
+.search--big { height: 70px; border-radius: 24px; padding-right: 10px; }
+.search--big input { font-size: 1.2rem; }
+@media (max-width: 520px) { .search--big .search__go { display: none; } }
+
+/* ---------- Tab, callout, form ---------- */
+.tabs { display: inline-flex; gap: 6px; padding: 5px; margin: 8px 0 22px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: 99px; }
+.tab { border: 0; background: transparent; padding: 8px 20px; border-radius: 99px; font-weight: 700; }
+.tab.is-active { background: var(--moss); color: var(--cream); }
+.callout { display: flex; gap: 10px; align-items: flex-start; padding: 14px 18px; border: 2.5px solid var(--ink); border-radius: 16px; margin: 16px 0; max-width: none; }
+.callout svg { flex: none; margin-top: 3px; }
+.callout--warn { background: #FADFD6; }
+.callout--info { background: #FFF1C9; }
+.form { display: grid; gap: 14px; max-width: 560px; }
+.form label { display: grid; gap: 6px; font-weight: 700; }
+.form input, .form textarea { padding: 12px 14px; border: 2.5px solid var(--ink); border-radius: 14px; background: #fff; font-weight: 400; }
+.form__err { color: #B3361A; font-weight: 700; margin: 0; }
+.form__ok { color: var(--moss); font-weight: 700; margin: 0; }
+
+/* ---------- Maskot dan gelembung ---------- */
+.mascot { overflow: visible; flex: none; }
+.mascot__body { animation: bob 3s ease-in-out infinite; transform-origin: center bottom; transform-box: fill-box; }
+.mascot__eyes { animation: blink 5s infinite; transform-origin: center; transform-box: fill-box; }
+.mascot__sprout { animation: sway 2.6s ease-in-out infinite; transform-origin: 80px 56px; }
+.mascot--talking .mascot__mouth { animation: talk .24s ease-in-out infinite alternate; transform-origin: center; transform-box: fill-box; }
+.mascot--oops .mascot__body { animation: wobble .5s 2; }
+.mascot--cheer .mascot__body { animation: hop .7s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-4px); } }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
+@keyframes sway { 50% { transform: rotate(6deg); } }
+@keyframes talk { to { transform: scaleY(1.6); } }
+@keyframes wobble { 25% { transform: rotate(-4deg); } 75% { transform: rotate(4deg); } }
+@keyframes hop { 50% { transform: translateY(-10px); } }
+
+.speaker { display: flex; align-items: center; gap: 14px; }
+.speaker--col { flex-direction: column; text-align: center; }
+.bubble { position: relative; max-width: 520px; text-align: left; padding: 14px 18px; background: #fff; border: 2.5px solid var(--ink); border-radius: 18px; box-shadow: var(--shadow-sm); cursor: pointer; line-height: 1.5; }
+.bubble::before { content: ''; position: absolute; width: 16px; height: 16px; background: #fff; border: 2.5px solid var(--ink); border-right: 0; border-bottom: 0; transform: rotate(-45deg); left: -10px; top: 24px; }
+.speaker--col .bubble::before { left: 50%; top: -10px; margin-left: -8px; transform: rotate(45deg); }
+.bubble__name { display: block; margin-bottom: 4px; font: 500 .75rem var(--font-mono); color: var(--moss); }
+.bubble__text { display: grid; }
+.bubble__text > * { grid-area: 1 / 1; }
+.bubble__ghost { visibility: hidden; }
+.bubble__caret { display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -2px; background: var(--ink); animation: caret .8s steps(2) infinite; }
+.bubble__caret.is-off { display: none; }
+@keyframes caret { 50% { opacity: 0; } }
+
+/* ---------- Overlay ---------- */
+.overlay { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 14px; background: rgba(31, 42, 36, .66); overflow: auto; animation: fade .25s; }
+.overlay__panel { position: relative; width: min(640px, 100%); max-height: calc(100dvh - 28px); overflow: auto; padding: 26px; background: var(--cream); border: 3px solid var(--ink); border-radius: 26px; box-shadow: var(--shadow); animation: pageIn .35s var(--ease); }
+.overlay__panel--wide { width: min(1040px, 100%); }
+.overlay__close { position: absolute; top: 12px; right: 12px; z-index: 6; width: 40px; height: 40px; display: grid; place-items: center; border: 2.5px solid var(--ink); border-radius: 50%; background: var(--paper); }

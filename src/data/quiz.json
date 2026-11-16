@@ -1,0 +1,17 @@
+{
+  "title": "Kuis Cerita: Minggu Pagi Pilo",
+  "intro": "Minggu pagi, Pilo mau membereskan rumah. Tapi banyak barang yang membuatnya bingung. Bantu Pilo memutuskan ya!",
+  "questions": [
+    { "scene": "dapur", "say": "Di dapur, Pilo menemukan kulit pisang sisa sarapan. Menurutmu, ini masuk mana?", "options": [{ "text": "Organik" }, { "text": "Anorganik" }, { "text": "B3" }], "correct": 0, "explain": "Kulit pisang berasal dari tumbuhan dan bisa dikompos, jadi masuk organik." },
+    { "scene": "dapur", "say": "Lalu ada botol plastik air minum yang sudah kosong. Apa yang sebaiknya Pilo lakukan?", "options": [{ "text": "Dibakar saja biar cepat" }, { "text": "Dibilas, dipipihkan, lalu dikumpulkan" }, { "text": "Dibuang ke selokan" }], "correct": 1, "explain": "Botol PET yang bersih umumnya diterima bank sampah atau pengepul. Jangan dibakar atau dibuang ke selokan." },
+    { "scene": "ruang", "say": "Di ruang tengah, remote TV mati. Pilo membuka dan menemukan baterai bekas. Masuk mana?", "options": [{ "text": "Residu" }, { "text": "Organik" }, { "text": "B3" }], "correct": 2, "explain": "Baterai mengandung logam dan bahan kimia, jadi termasuk B3 dan diserahkan lewat kanal resmi." },
+    { "scene": "kamar", "say": "Di kamar si kecil, ada popok sekali pakai. Pilo harus memasukkannya ke mana?", "options": [{ "text": "Residu" }, { "text": "Anorganik daur ulang" }, { "text": "Organik" }], "correct": 0, "explain": "Popok campuran bahan dan terkontaminasi, jadi masuk residu. Gulung dan ikat rapat ya." },
+    { "scene": "dapur", "say": "Terakhir, Pilo punya sisa minyak jelantah. Apa yang paling tepat?", "options": [{ "text": "Dibuang ke wastafel" }, { "text": "Disiram ke tanah" }, { "text": "Ditampung di botol tertutup, lalu diserahkan ke penampung jelantah" }], "correct": 2, "explain": "Minyak bisa menyumbat pipa dan mencemari air. Tampung dulu, lalu cari program penampungan di sekitarmu." },
+    { "scene": "teras", "say": "Pilo mau belanja ke pasar. Kebiasaan mana yang paling mengurangi sampah?", "options": [{ "text": "Bawa tas belanja sendiri" }, { "text": "Minta plastik baru tiap toko" }, { "text": "Membungkus semuanya dua lapis" }], "correct": 0, "explain": "Sampah yang paling mudah dikelola adalah yang tidak pernah dibuat. Bawa tas sendiri!" }
+  ],
+  "results": [
+    { "min": 0, "mood": "think", "say": "Tidak apa-apa, belajar itu pelan-pelan. Coba baca materinya lagi, lalu main lagi ya." },
+    { "min": 3, "mood": "happy", "say": "Bagus! Kamu sudah paham dasarnya. Tinggal sedikit lagi." },
+    { "min": 5, "mood": "cheer", "say": "Hebat! Rumah Pilo jadi rapi berkat kamu." }
+  ]
+}
