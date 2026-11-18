@@ -6,7 +6,7 @@ export const SITE = {
   tagline: 'Cari nama barangnya, pahami jenisnya, lalu pilah dari rumah.',
   email: 'gedeprameswaraag@gmail.com', // tujuan mailto formulir usulan
   logoImage: '/logo.svg', // isi '/logo.png' (taruh di folder public) untuk mengganti logo SVG bawaan
-  mascotName: 'Pilo',
+  mascotName: 'Ambang',
 
   team: {
     name: 'Mepet',

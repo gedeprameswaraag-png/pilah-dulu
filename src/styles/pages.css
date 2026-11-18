@@ -428,89 +428,6 @@
    PILAH — Tentang & Cari sampah
    ========================================================== */
 
-/* About: overriding .about lama (gap lebih longgar) */
-.about {
-  display: grid;
-  gap: 28px;
-}
-
-.about__lead {
-  font-size: 1.05rem;
-  color: var(--muted);
-  line-height: 1.65;
-  max-width: 70ch;
-}
-
-.about__vm {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.about__vm-card h2 {
-  margin-top: 0;
-  color: var(--moss);
-}
-
-.about__list {
-  margin: 0;
-  padding-left: 1.15em;
-  display: grid;
-  gap: 8px;
-}
-
-.about__list li {
-  font-size: .95rem;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-/* Cara kerja */
-.about__steps {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 14px;
-}
-
-.about__step {
-  display: flex;
-  gap: 18px;
-  padding: 20px 22px;
-  background: var(--paper);
-  border: 2.5px solid var(--ink);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-.about__step-num {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--pucuk);
-  border: 2.5px solid var(--ink);
-  font: 800 1.05rem var(--font-head);
-}
-
-.about__step h3 { margin: 0 0 4px; font-size: 1rem; }
-.about__step p  { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; }
-
-/* CTA */
-.about__cta {
-  display: flex;
-  justify-content: center;
-  padding: 8px 0 16px;
-}
-
-.about__cta .btn {
-  font-size: 1.02rem;
-  padding: 14px 28px;
-}
-
 /* ==========================================================
    4 KARTU JENIS SAMPAH YANG MELEBAR SAAT DIKLIK
    ========================================================== */
@@ -640,10 +557,6 @@
 }
 
 /* Responsif */
-@media (max-width: 900px) {
-  .about__vm { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 760px) {
   .cat-expand {
     flex-direction: column;

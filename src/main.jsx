@@ -10,6 +10,7 @@ import './styles/layout.css'
 import './styles/components.css'
 import './styles/pages.css'
 import './styles/belajar.css'
+import './styles/about.css'
 import App from './App'
 
 createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>)
