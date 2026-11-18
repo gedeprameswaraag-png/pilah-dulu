@@ -1,84 +1,83 @@
-
 /* ==========================================================
    KONTAK — PILAH DULU
-   Inspired by Wavespace Contact Page
+   Full background + glassmorphism
+   Semua selector dibatasi pada halaman Kontak.
    ========================================================== */
 
 .contact-page {
-  background: var(--cream);
+  --contact-green: #426D49;
+  --contact-dark: #263D32;
+  --contact-muted: #718075;
+
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   color: var(--ink);
+  background: var(--paper);
 }
 
-/* ================= HERO ================= */
-
-.contact-hero {
+/* HERO: background dimulai dari bagian paling atas viewport */
+.contact-page .contact-hero {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  width: 100%;
   min-height: 650px;
-  padding: 65px 0 115px;
-  background:
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* Ruang untuk navbar yang overlay */
+  padding: 145px 0 110px;
+
+  background-color: #B7D5D4;
+  background-image:
     linear-gradient(
-      180deg,
-      #9fc9d3 0%,
-      #c5ded6 48%,
-      #e5ebd5 100%
-    );
+      90deg,
+      rgba(224, 238, 225, .30),
+      rgba(220, 235, 222, .12)
+    ),
+    url('/bglaut.svg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Dekorasi langit */
-
-.contact-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: .5;
-  background:
-    radial-gradient(ellipse at 75% 20%, rgba(255,255,255,.65), transparent 30%),
-    radial-gradient(ellipse at 15% 35%, rgba(255,255,255,.55), transparent 25%),
-    linear-gradient(180deg, transparent 60%, rgba(255,255,255,.25));
-}
-
-/* Layout hero */
-
-.contact-hero__layout {
+.contact-page .contact-hero__layout {
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: 1fr .9fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
   align-items: center;
   gap: 55px;
 }
 
-/* Konten kiri */
-
-.contact-hero__content {
+.contact-page .contact-hero__content {
   max-width: 540px;
   color: var(--ink);
 }
 
-.contact-label {
+.contact-page .contact-label {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--moss);
+  color: var(--contact-green);
   font: 800 .72rem var(--font-mono);
   letter-spacing: .13em;
 }
 
-.contact-hero__content h1 {
+.contact-page .contact-hero__content h1 {
   margin: 22px 0 20px;
   font: 800 clamp(2.8rem, 5vw, 4.4rem)/1.04 var(--font-head);
   letter-spacing: -.045em;
 }
 
-.contact-hero__content h1 span {
+.contact-page .contact-hero__content h1 span {
   display: block;
-  color: var(--moss);
+  color: var(--contact-green);
 }
 
-.contact-hero__content > p {
+.contact-page .contact-hero__content > p {
   max-width: 440px;
   margin: 0;
   color: #34483F;
@@ -86,170 +85,170 @@
   line-height: 1.75;
 }
 
-.contact-hero__note {
+.contact-page .contact-hero__note {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 28px;
+  color: var(--contact-green);
   font-size: .88rem;
   font-weight: 700;
-  color: var(--moss);
 }
 
-.contact-hero__note-icon {
+.contact-page .contact-hero__note-icon {
   width: 36px;
   height: 36px;
   display: grid;
   place-items: center;
-  border: 1.5px solid var(--moss);
+  flex: 0 0 auto;
+  border: 1.5px solid var(--contact-green);
   border-radius: 50%;
-  background: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.3);
 }
 
-/* ================= FORM ================= */
-
-.contact-form {
+/* FORM KACA */
+.contact-page .contact-form {
   position: relative;
-  padding: 27px;
-  background: rgba(255,255,255,.94);
-  border: 2px solid rgba(255,255,255,.9);
-  border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(35,65,49,.16);
-  backdrop-filter: blur(10px);
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 29px;
+  background: rgba(255,255,255,.34);
+  border: 1px solid rgba(255,255,255,.68);
+  border-radius: 23px;
+  box-shadow:
+    0 15px 45px rgba(35,65,49,.10),
+    inset 0 1px 0 rgba(255,255,255,.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
-.contact-form__heading {
-  margin-bottom: 20px;
+.contact-page .contact-form__heading {
+  margin-bottom: 22px;
 }
 
-.contact-form__heading > span {
-  color: var(--moss);
+.contact-page .contact-form__heading > span {
+  color: var(--contact-green);
   font: 700 .65rem var(--font-mono);
   letter-spacing: .14em;
 }
 
-.contact-form__heading h2 {
+.contact-page .contact-form__heading h2 {
   margin: 6px 0 5px;
   font: 800 1.55rem var(--font-head);
 }
 
-.contact-form__heading p {
+.contact-page .contact-form__heading p {
   margin: 0;
-  color: var(--muted);
+  color: #52675A;
   font-size: .82rem;
   line-height: 1.5;
 }
 
-/* Grid form */
-
-.contact-form__grid {
+.contact-page .contact-form__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px 13px;
 }
 
-.contact-field {
+.contact-page .contact-field {
   display: grid;
   gap: 7px;
   min-width: 0;
 }
 
-.contact-field--full {
+.contact-page .contact-field--full {
   grid-column: 1 / -1;
 }
 
-.contact-field label {
+.contact-page .contact-field label {
+  color: var(--contact-dark);
   font: 700 .78rem var(--font-head);
 }
 
-.contact-field input,
-.contact-field textarea {
+.contact-page .contact-field input,
+.contact-page .contact-field textarea {
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
   padding: 12px 13px;
-  border: 1px solid #D9DFD8;
-  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,.85);
+  border-radius: 10px;
   outline: none;
-  background: #FAFBF8;
+  background: rgba(255,255,255,.68);
   color: var(--ink);
   font: inherit;
   font-size: .82rem;
-  transition: border-color .2s, box-shadow .2s;
+  transition: border-color .2s, background .2s, box-shadow .2s;
 }
 
-.contact-field input {
-  height: 43px;
+.contact-page .contact-field input {
+  height: 44px;
 }
 
-.contact-field textarea {
+.contact-page .contact-field textarea {
   min-height: 100px;
   resize: vertical;
 }
 
-.contact-field input:focus,
-.contact-field textarea:focus {
-  border-color: var(--moss);
+.contact-page .contact-field input:focus,
+.contact-page .contact-field textarea:focus {
+  border-color: var(--contact-green);
+  background: rgba(255,255,255,.9);
   box-shadow: 0 0 0 3px rgba(73,108,78,.12);
 }
 
-.contact-field input::placeholder,
-.contact-field textarea::placeholder {
-  color: #A0A79F;
+.contact-page .contact-field input::placeholder,
+.contact-page .contact-field textarea::placeholder {
+  color: #87958A;
 }
 
-/* Tombol */
-
-.contact-submit {
+.contact-page .contact-submit {
   width: 100%;
-  min-height: 47px;
+  min-height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 9px;
   margin-top: 19px;
   padding: 12px 20px;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--contact-dark);
   border-radius: 999px;
   background: var(--pucuk);
-  color: var(--ink);
+  color: var(--contact-dark);
   font: 800 .9rem var(--font-head);
   cursor: pointer;
   transition: transform .2s, background .2s, box-shadow .2s;
 }
 
-.contact-submit:hover {
+.contact-page .contact-submit:hover {
   transform: translateY(-2px);
   background: #C3DDAE;
-  box-shadow: 0 5px 0 var(--ink);
+  box-shadow: 0 5px 0 var(--contact-dark);
 }
 
-.contact-submit:active {
+.contact-page .contact-submit:active {
   transform: translateY(0);
   box-shadow: none;
 }
 
-.contact-form__footnote {
+.contact-page .contact-form__footnote {
   margin: 12px 0 0;
+  color: #52675A;
   text-align: center;
-  color: var(--muted);
   font-size: .7rem;
 }
 
-/* ================= LANDSCAPE ================= */
-
-/* Bukit belakang */
-
-.contact-hero__landscape {
+/* LANDSCAPE DEKORATIF */
+.contact-page .contact-hero__landscape {
   position: absolute;
   z-index: 1;
   inset: auto 0 0;
-  height: 165px;
+  height: 125px;
   overflow: hidden;
   pointer-events: none;
 }
 
-.contact-hill {
+.contact-page .contact-hill {
   position: absolute;
   bottom: -85px;
   width: 120%;
@@ -257,21 +256,19 @@
   border-radius: 50% 50% 0 0;
 }
 
-.contact-hill--back {
+.contact-page .contact-hill--back {
   left: -10%;
   bottom: -95px;
   background: #B8D0A2;
 }
 
-.contact-hill--front {
+.contact-page .contact-hill--front {
   left: 15%;
   bottom: -120px;
   background: #8EAD77;
 }
 
-/* Pepohonan dekoratif */
-
-.contact-trees {
+.contact-page .contact-trees {
   position: absolute;
   bottom: 22px;
   left: 0;
@@ -281,7 +278,7 @@
   align-items: flex-end;
 }
 
-.contact-tree {
+.contact-page .contact-tree {
   position: relative;
   width: 33px;
   height: 33px;
@@ -292,167 +289,194 @@
     -8px 8px 0 -4px #527E52;
 }
 
-.contact-tree::after {
+.contact-page .contact-tree::after {
   content: '';
   position: absolute;
   top: 23px;
   left: 14px;
+  z-index: -1;
   width: 6px;
   height: 20px;
   background: #765C3E;
-  z-index: -1;
 }
 
-.contact-tree--0 {
+.contact-page .contact-tree--0 {
   transform: scale(.75);
   background: #76965D;
 }
 
-.contact-tree--1 {
+.contact-page .contact-tree--1 {
   transform: scale(1.3);
   background: #426D49;
 }
 
-/* ================= BOTTOM INFORMATION ================= */
-
-.contact-bottom {
+/* DUA CARD INFORMASI */
+.contact-page .contact-bottom {
   position: relative;
   z-index: 2;
-  padding-block: 45px 50px;
+  width: 100%;
+  margin: 0;
+  padding: 38px 0 42px;
+  box-sizing: border-box;
   background: var(--paper);
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid rgba(38,61,50,.15);
 }
 
-.contact-bottom__inner {
+.contact-page .contact-bottom__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 25px;
 }
 
-.contact-bottom__eyebrow {
+.contact-page .contact-bottom__about,
+.contact-page .contact-bottom__details {
+  min-width: 0;
+  padding: 29px 30px;
+  box-sizing: border-box;
+  background: #F5F7F0;
+  border: 1px solid #E2E9DC;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(35,65,49,.045);
+}
+
+.contact-page .contact-bottom__eyebrow {
   display: block;
-  margin-bottom: 12px;
-  color: var(--muted);
+  margin-bottom: 13px;
+  color: var(--contact-green);
   font: 700 .68rem var(--font-mono);
   letter-spacing: .1em;
 }
 
-.contact-bottom__about h2 {
-  margin: 0 0 10px;
+.contact-page .contact-bottom__about h2 {
+  margin: 0 0 12px;
   font: 800 clamp(1.5rem, 2.5vw, 2rem)/1.15 var(--font-head);
   letter-spacing: -.03em;
 }
 
-.contact-bottom__about p {
+.contact-page .contact-bottom__about p {
   max-width: 390px;
   margin: 0;
-  color: var(--muted);
+  color: var(--contact-muted);
   font-size: .86rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-.contact-bottom__details > a {
+.contact-page .contact-bottom__details > a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--moss);
+  max-width: 100%;
+  color: var(--contact-green);
   font: 800 clamp(1rem, 2vw, 1.35rem) var(--font-head);
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
-.contact-bottom__details > a:hover {
+.contact-page .contact-bottom__details > a:hover {
   text-decoration: underline;
 }
 
-.contact-bottom__team {
+.contact-page .contact-bottom__team {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 22px;
+  gap: 16px 22px;
+  margin-top: 23px;
+  padding-top: 19px;
+  border-top: 1px solid #DDE5D8;
 }
 
-.contact-bottom__team > span {
+.contact-page .contact-bottom__team > span {
   display: grid;
-  gap: 4px;
+  gap: 5px;
   font: 700 .78rem var(--font-head);
 }
 
-.contact-bottom__team small {
-  color: var(--muted);
+.contact-page .contact-bottom__team small {
+  color: var(--contact-muted);
   font: 400 .7rem var(--font-mono);
 }
 
-/* ================= RESPONSIVE ================= */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .contact-hero {
-    padding-top: 60px;
-    padding-bottom: 130px;
+  .contact-page .contact-hero {
+    padding-top: 125px;
+    padding-bottom: 115px;
   }
 
-  .contact-hero__layout {
-    grid-template-columns: 1fr;
+  .contact-page .contact-hero__layout {
+    grid-template-columns: minmax(0, 1fr);
     gap: 35px;
   }
 
-  .contact-hero__content {
+  .contact-page .contact-hero__content {
     max-width: 650px;
   }
 
-  .contact-form {
+  .contact-page .contact-form {
     width: 100%;
     max-width: 650px;
-    box-sizing: border-box;
   }
 
-  .contact-hero__landscape {
-    height: 130px;
+  .contact-page .contact-bottom__inner {
+    gap: 18px;
   }
 
-  .contact-bottom__inner {
-    gap: 35px;
+  .contact-page .contact-bottom__about,
+  .contact-page .contact-bottom__details {
+    padding: 24px;
   }
 }
 
 @media (max-width: 600px) {
-  .contact-hero {
-    padding-top: 45px;
-    padding-bottom: 115px;
+  .contact-page .contact-hero {
+    min-height: 0;
+    padding-top: 110px;
+    padding-bottom: 95px;
+    background-position: center top;
   }
 
-  .contact-hero__content h1 {
+  .contact-page .contact-hero__content h1 {
     font-size: clamp(2.4rem, 11vw, 3.2rem);
   }
 
-  .contact-hero__content > p {
+  .contact-page .contact-hero__content > p {
     font-size: .9rem;
   }
 
-  .contact-form {
+  .contact-page .contact-form {
     padding: 20px;
-    border-radius: 16px;
+    border-radius: 17px;
   }
 
-  .contact-form__grid {
-    grid-template-columns: 1fr;
+  .contact-page .contact-form__grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .contact-field--full {
+  .contact-page .contact-field--full {
     grid-column: auto;
   }
 
-  .contact-bottom {
-    padding-block: 35px;
+  .contact-page .contact-hero__landscape {
+    height: 100px;
   }
 
-  .contact-bottom__inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .contact-page .contact-bottom {
+    padding: 25px 0 30px;
   }
 
-  .contact-bottom__team {
+  .contact-page .contact-bottom__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .contact-page .contact-bottom__about,
+  .contact-page .contact-bottom__details {
+    padding: 23px;
+    border-radius: 17px;
+  }
+
+  .contact-page .contact-bottom__team {
     gap: 14px;
   }
 }

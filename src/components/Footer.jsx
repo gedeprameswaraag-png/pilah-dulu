@@ -16,7 +16,7 @@ export default function Footer() {
             <FooterFact />
 
             <div className="footer__brand-info">
-              <span className="footer__brand-name">AMBANG.</span>
+              <span className="footer__brand-name">Pilah Dulu.</span>
               <p>
                 Langkah kecil, dampak besar.
                 Kenali sampah dan mulai perubahan
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* KOLOM INFORMASI */}
           <div className="footer__column">
-            <h3 className="footer__h">Tentang AMBANG</h3>
+            <h3 className="footer__h">Tentang Pilah Dulu</h3>
             <p>
               Platform edukasi untuk mengenali,
               memahami, dan mengelola sampah
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© 2026 AMBANG. All rights reserved.</span>
+          <span>© 2026 Pilah Dulu. All rights reserved.</span>
           <span>Langkah kecil, dampak besar.</span>
         </div>
 

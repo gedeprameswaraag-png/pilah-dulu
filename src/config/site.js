@@ -4,9 +4,9 @@
 export const SITE = {
   name: 'Pilah Dulu',
   tagline: 'Cari nama barangnya, pahami jenisnya, lalu pilah dari rumah.',
-  email: 'tim.mepet@example.com', // tujuan mailto formulir usulan
+  email: 'gedeprameswaraag@gmail.com', // tujuan mailto formulir usulan
   logoImage: '/logo.svg', // isi '/logo.png' (taruh di folder public) untuk mengganti logo SVG bawaan
-  mascotName: 'Ambang',
+  mascotName: 'Pilo',
 
   team: {
     name: 'Mepet',

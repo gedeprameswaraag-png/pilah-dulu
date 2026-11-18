@@ -138,7 +138,7 @@ export default function Home() {
         <div className="learn">
           <Mascot className="learn__mascot" mood="cheer" size={140} />
           <div className="learn__copy">
-            <span className="eyebrow">Mulai belajar bersama AMBANG</span>
+            <span className="eyebrow">Mulai belajar bersama Pilo</span>
             <h2 id="belajar">Belajar sambil bertindak, satu langkah kecil setiap hari.</h2>
             <p>Kenali jenis sampah, pahami risikonya, dan temukan cara menanganinya lewat kartu interaktif dan kuis seru.</p>
           </div>

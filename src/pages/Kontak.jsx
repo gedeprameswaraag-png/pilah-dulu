@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Mail, ArrowUpRight, Leaf } from 'lucide-react'
 import { SITE } from '../config/site'
@@ -42,8 +41,6 @@ ${form.message}`
 
   return (
     <main className="contact-page">
-
-      {/* HERO DAN FORM */}
       <section className="contact-hero">
         <div className="contact-hero__landscape" aria-hidden="true">
           <div className="contact-hill contact-hill--back" />
@@ -60,8 +57,6 @@ ${form.message}`
         </div>
 
         <div className="container contact-hero__layout">
-
-          {/* KONTEN KIRI */}
           <div className="contact-hero__content">
             <span className="contact-label">
               <Leaf size={13} />
@@ -88,7 +83,6 @@ ${form.message}`
             </div>
           </div>
 
-          {/* FORM KANAN */}
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="contact-form__heading">
               <span>LET'S TALK</span>
@@ -148,9 +142,7 @@ ${form.message}`
               </div>
 
               <div className="contact-field contact-field--full">
-                <label htmlFor="organization">
-                  Instansi / Organisasi
-                </label>
+                <label htmlFor="organization">Instansi / Organisasi</label>
                 <input
                   id="organization"
                   name="organization"
@@ -187,15 +179,15 @@ ${form.message}`
         </div>
       </section>
 
-      {/* INFORMASI BAGIAN BAWAH */}
       <section className="contact-bottom">
         <div className="container contact-bottom__inner">
-
           <div className="contact-bottom__about">
             <span className="contact-bottom__eyebrow">
               TENTANG KAMI
             </span>
+
             <h2>Kenali tim di balik Pilah Dulu.</h2>
+
             <p>
               {SITE.name} dikembangkan oleh tim {SITE.team.name}
               {' '}untuk membantu masyarakat mengenali dan memilah
@@ -207,6 +199,7 @@ ${form.message}`
             <span className="contact-bottom__eyebrow">
               HUBUNGI KAMI
             </span>
+
             <a href={`mailto:${SITE.email}`}>
               {SITE.email}
               <ArrowUpRight size={19} />
@@ -221,10 +214,8 @@ ${form.message}`
               ))}
             </div>
           </div>
-
         </div>
       </section>
-
     </main>
   )
 }
