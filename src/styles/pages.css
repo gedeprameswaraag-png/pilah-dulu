@@ -1,68 +1,660 @@
-/* ---------- Beranda ---------- */
-.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding-top: 20px; padding-bottom: 32px; }
-.hero__title { font-size: clamp(2.7rem, 6.5vw, 4.8rem); font-weight: 800; line-height: 1; letter-spacing: -.025em; }
-.hero__lead { font-size: 1.15rem; color: var(--muted); margin: 14px 0 22px; }
-.hero__live { margin-top: 16px; min-height: 120px; }
-.hero__chips-title { font: 500 .85rem var(--font-mono); color: var(--muted); margin: 16px 0 0; }
-.hero__art { position: relative; height: 440px; }
-.hero__mascot { position: absolute; right: 2%; bottom: 0; }
-.tag-card { position: absolute; width: 210px; display: grid; gap: 8px; justify-items: start; padding: 22px 18px 16px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-sm); animation: floaty 5s ease-in-out infinite; transform: rotate(var(--r)); }
-.tag-card__hole { position: absolute; top: 9px; left: 50%; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--cream); }
-.tag-card__name { font: 500 1.05rem var(--font-mono); }
-.tag-card--1 { --r: -6deg; top: 8px; left: 2%; }
-.tag-card--2 { --r: 5deg; top: 118px; right: 0; animation-delay: -1.6s; }
-.tag-card--3 { --r: -3deg; top: 244px; left: 12%; animation-delay: -3s; }
-@keyframes floaty { 50% { transform: rotate(var(--r)) translateY(-9px); } }
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero__art { height: 330px; order: -1; }
-  .tag-card--3 { display: none; }
+/* ==========================================================
+   BERANDA — REDESIGN
+   ========================================================== */
+
+.eyebrow {
+  display: inline-block;
+  font: 700 .72rem/1 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--pucuk);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
 }
 
-.section { padding-block: 44px; }
-.section__title { margin-bottom: 22px; }
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.steps__item { padding: 22px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-.steps__item p { margin: 0; color: var(--muted); }
-.steps__num { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 12px; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--pucuk); font: 800 1.1rem var(--font-head); }
-@media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
-.info-card p { margin: 0; color: var(--muted); }
-.info-card__icon { display: inline-grid; place-items: center; width: 46px; height: 46px; margin-bottom: 12px; border-radius: 14px; border: 2.5px solid var(--ink); background: var(--cat-soft, #DCEBE2); }
 
-.preview { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
-.preview__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
-.preview__list { margin: 0; display: grid; gap: 4px; }
-.preview__list dt { font: 500 .8rem var(--font-mono); color: var(--moss); margin-top: 10px; }
-.preview__list dd { margin: 0; }
-@media (max-width: 800px) { .preview { grid-template-columns: 1fr; } }
+/* ================= HERO BACKGROUND ================= */
 
-.cta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 28px; background: var(--moss); color: var(--cream); border: 2.5px solid var(--ink); border-radius: 28px; box-shadow: var(--shadow); }
-.cta h2 { margin-bottom: 4px; }
-.cta p { margin: 0; color: #DCEBE2; }
-.cta > div { flex: 1; min-width: 220px; }
+/* ================= HERO FULL SCREEN ================= */
 
-/* ---------- Pilah ---------- */
-.page-head { padding-top: 12px; }
-.page-head p { margin-bottom: 10px; }
-.chips--filter { margin: 16px 0 6px; }
-.cat-cards { margin: 18px 0 8px; }
-.cat-card { position: relative; padding-top: 30px; }
-.cat-card p { color: var(--muted); font-size: .95rem; }
-.cat-card__dot { position: absolute; top: -2.5px; left: 22px; width: 54px; height: 12px; border-radius: 0 0 10px 10px; background: var(--cat); border: 2.5px solid var(--ink); border-top: 0; }
-.results__count { margin: 22px 0 12px; font: 500 .85rem var(--font-mono); color: var(--muted); }
-.empty { text-align: center; }
-.empty p { margin-inline: auto; }
-.about { display: grid; gap: 8px; }
-.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
-.about h2.section__title { margin-top: 26px; }
-.about .card p { margin-bottom: 0; }
-.note { margin-top: 20px; }
-@media (max-width: 760px) { .about__grid { grid-template-columns: 1fr; } }
-.sources { display: grid; gap: 10px; max-width: 78ch; }
-.sources li { padding-left: 18px; position: relative; }
-.sources li::before { content: ''; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--moss); }
-.team__card { display: grid; gap: 2px; justify-items: center; text-align: center; }
-.team__avatar { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 8px; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--pucuk); font: 800 1.4rem var(--font-head); }
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  /* Tarik hero ke atas agar background berada di belakang Navbar */
+  margin-top: -130px;
+
+  /* Hero mengisi satu layar */
+  min-height: 100vh;
+  min-height: 100svh;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  /* Kompensasi ruang untuk Navbar */
+  padding-top: 190px;
+  padding-bottom: 0;
+}
+
+/* Ilustrasi memenuhi sisi kanan dan mencapai bagian atas hero */
+.home-hero__art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: #B8D7D8;
+}
+
+.home-hero__art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-hero__art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--cream) 0%,
+    rgba(244, 239, 222, .85) 12%,
+    rgba(244, 239, 222, .25) 38%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.home-hero__copy {
+  max-width: min(40rem, 55%);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: auto;
+    padding-top: 56vh;
+    padding-bottom: 56px;
+    align-items: flex-end;
+  }
+
+  .home-hero__art {
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .home-hero__art img {
+    object-position: center;
+  }
+
+  .home-hero__art::after {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(244, 239, 222, .15) 50%,
+      var(--cream) 100%
+    );
+  }
+
+  .home-hero__copy {
+    max-width: 100%;
+  }
+}
+
+
+/* --------------------- BRIDGE PENCEMARAN --------------------- */
+/* height: 0 + translate(-50%, -50%) → pill persis di garis batas hero/fakta */
+.pollution-bridge {
+  position: relative;
+  height: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pollution-bridge__inner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 8px 7px 16px;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.pollution-bridge__label {
+  font: 700 .68rem var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.pollution-bridge__item { position: relative; }
+
+.pollution-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--ink);
+  font: 700 .86rem var(--font-head);
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.pollution-pill--air   svg { color: #1E5FA8; }
+.pollution-pill--tanah svg { color: #8A5A2B; }
+.pollution-pill--udara svg { color: #384B5C; }
+
+.pollution-pill:hover { background: var(--cream); border-color: var(--ink); }
+
+.pollution-pill.is-open {
+  background: var(--pucuk);
+  border-color: var(--ink);
+}
+
+.pollution-pill__panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 16px;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.pollution-pill__panel h4 { margin: 0 0 6px; font-size: .95rem; }
+.pollution-pill__panel p  { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--muted); }
+
+.pollution-pill__panel::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%) rotate(45deg);
+  background: var(--paper);
+  border-left: 2.5px solid var(--ink);
+  border-top: 2.5px solid var(--ink);
+}
+
+/* --------------------- FAKTA SAMPAH INDONESIA --------------------- */
+.facts {
+  padding-block: 84px 56px;   /* atas: 59px ekstra untuk bagian bawah pill */
+  background: var(--moss);
+  color: var(--cream);
+  border-top: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+}
+
+.facts .eyebrow {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--cream);
+  box-shadow: none;
+}
+
+.facts__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.facts__title {
+  font: 800 clamp(1.5rem, 3vw, 2.2rem)/1.1 var(--font-head);
+  color: var(--cream);
+  margin: 12px 0 0;
+  letter-spacing: -.02em;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat {
+  padding: 20px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .06);
+  border: 2.5px solid var(--cream);
+}
+
+.stat__value {
+  display: block;
+  font: 800 clamp(1.6rem, 2.6vw, 2.1rem)/1 var(--font-head);
+  color: var(--pucuk);
+  letter-spacing: -.02em;
+}
+
+.stat__value small {
+  display: block;
+  margin-top: 6px;
+  font: 600 .7rem var(--font-mono);
+  color: #CFE0D5;
+}
+
+.stat h3 { margin: 14px 0 0; font-size: .9rem; color: var(--cream); }
+.stat p  { margin: 6px 0 0; font-size: .78rem; color: #BCD2C3; }
+
+.facts__source {
+  margin-top: 20px;
+  font-size: .75rem;
+  color: #9FB8A8;
+}
+
+/* --------------------- FAKTA SINGKAT (BUBBLE DARI MASKOT) --------------------- */
+.fact-moment {
+  padding-block: 56px 32px;   /* bagian bawah lebih rapat, dekat ke CTA belajar */
+}
+
+.fact-moment__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.fact-moment__mascot {
+  flex-shrink: 0;
+  position: relative;
+  top: 8px;
+}
+
+.fact-bubble {
+  position: relative;
+  flex: 1;
+  max-width: 720px;
+  padding: 18px 24px 20px;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: var(--shadow-sm);
+  animation: bubbleIn .45s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+/* Ekor bubble menunjuk ke maskot */
+.fact-bubble::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 32px;
+  width: 18px;
+  height: 18px;
+  background: var(--paper);
+  border-left: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+  transform: rotate(45deg);
+}
+
+.fact-bubble__label {
+  display: inline-block;
+  font: 700 .7rem var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 6px;
+}
+
+.fact-bubble p {
+  margin: 0 0 12px;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.fact-bubble__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: 700 .82rem var(--font-head);
+  color: var(--moss);
+}
+
+@keyframes bubbleIn {
+  from { opacity: 0; transform: translateX(-14px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --------------------- BELAJAR BERSAMA AMBANG --------------------- */
+.section--learn {
+  padding-top: 32px;
+  padding-bottom: 72px;
+}
+
+.learn {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--pucuk);
+  border: 2.5px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.learn__copy h2 { font-size: clamp(1.2rem, 2.2vw, 1.7rem); margin: 10px 0 6px; }
+.learn__copy p  { margin: 0; color: var(--ink); opacity: .78; max-width: 44rem; }
+.learn .eyebrow { background: var(--cream); }
+.learn__cta     { white-space: nowrap; }
+
+/* --------------------- RESPONSIF --------------------- */
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: auto;
+    padding-top: 56vh;
+    padding-bottom: 56px;
+    align-items: flex-end;
+  }
+  .home-hero__art {
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: 60vh;
+  }
+  .home-hero__art img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,0) 100%);
+    object-position: center;
+  }
+  .home-hero__art::after {
+    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+  }
+  .home-hero__copy { max-width: 100%; }
+
+  .pollution-bridge__inner { padding-left: 8px; gap: 4px; }
+  .pollution-bridge__label { display: none; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .learn { grid-template-columns: 1fr; gap: 24px; text-align: left; }
+  .learn__mascot { justify-self: start; }
+}
+
+@media (max-width: 600px) {
+  .pollution-pill { padding: 8px 12px; font-size: .8rem; }
+  .pollution-pill__panel { width: 240px; }
+  .stats { grid-template-columns: 1fr; }
+
+  .home-hero__actions { flex-direction: column; align-items: stretch; }
+  .home-hero__actions .btn,
+  .home-hero__actions .link-btn { justify-content: center; }
+
+  .fact-moment__inner { gap: 0; }
+  .fact-moment__mascot { top: 0; transform: scale(.85); transform-origin: top left; margin-right: -8px; }
+  .fact-bubble { padding: 14px 16px 16px; }
+  .fact-bubble::before { top: 26px; }
+  .facts__head { align-items: flex-start; }
+}
+
+/* ==========================================================
+   PILAH — Tentang & Cari sampah
+   ========================================================== */
+
+/* About: overriding .about lama (gap lebih longgar) */
+.about {
+  display: grid;
+  gap: 28px;
+}
+
+.about__lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+.about__vm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.about__vm-card h2 {
+  margin-top: 0;
+  color: var(--moss);
+}
+
+.about__list {
+  margin: 0;
+  padding-left: 1.15em;
+  display: grid;
+  gap: 8px;
+}
+
+.about__list li {
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Cara kerja */
+.about__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.about__step {
+  display: flex;
+  gap: 18px;
+  padding: 20px 22px;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.about__step-num {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--pucuk);
+  border: 2.5px solid var(--ink);
+  font: 800 1.05rem var(--font-head);
+}
+
+.about__step h3 { margin: 0 0 4px; font-size: 1rem; }
+.about__step p  { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; }
+
+/* CTA */
+.about__cta {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 16px;
+}
+
+.about__cta .btn {
+  font-size: 1.02rem;
+  padding: 14px 28px;
+}
+
+/* ==========================================================
+   4 KARTU JENIS SAMPAH YANG MELEBAR SAAT DIKLIK
+   ========================================================== */
+
+.cat-expand {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 22px 0 28px;
+}
+
+.cat-expand__card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 18px;
+  background: var(--cat-soft, var(--paper));
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  outline: none;
+  transition: flex-grow .4s cubic-bezier(.4, 0, .2, 1),
+              box-shadow .25s ease,
+              transform .25s ease;
+}
+
+.cat-expand__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.cat-expand__card:focus-visible {
+  outline: 3px solid var(--pucuk);
+  outline-offset: 2px;
+}
+
+.cat-expand__card.is-expanded {
+  flex-grow: 2.6;
+  box-shadow: var(--shadow);
+}
+
+.cat-expand__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cat-expand__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+}
+
+.cat-expand__head h3 {
+  margin: 0;
+  font-size: .95rem;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cat-expand__count {
+  flex-shrink: 0;
+  font: 700 .7rem var(--font-mono);
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.cat-expand__chev {
+  flex-shrink: 0;
+  transition: transform .3s ease;
+  opacity: .65;
+}
+
+.cat-expand__card.is-expanded .cat-expand__chev {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Body: transisi tinggi via grid-template-rows 0fr → 1fr */
+.cat-expand__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  transition: grid-template-rows .35s cubic-bezier(.4, 0, .2, 1),
+              margin-top .35s ease;
+}
+
+.cat-expand__body > div {
+  overflow: hidden;
+}
+
+.cat-expand__card.is-expanded .cat-expand__body {
+  grid-template-rows: 1fr;
+  margin-top: 14px;
+}
+
+.cat-expand__body p {
+  margin: 0 0 10px;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity .2s ease .1s;
+}
+
+.cat-expand__card.is-expanded .cat-expand__body p {
+  opacity: 1;
+}
+
+.cat-expand__body .link-btn {
+  opacity: 0;
+  transition: opacity .2s ease .15s;
+}
+
+.cat-expand__card.is-expanded .cat-expand__body .link-btn {
+  opacity: 1;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .about__vm { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .cat-expand {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cat-expand__card,
+  .cat-expand__card.is-expanded {
+    flex: none;
+  }
+  .cat-expand__head h3 { white-space: normal; }
+}
 
 /* ---------- Detail item ---------- */
 .detail { display: grid; gap: 18px; }

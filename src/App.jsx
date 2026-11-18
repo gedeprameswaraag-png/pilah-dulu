@@ -6,6 +6,7 @@ import { VoiceProvider } from './components/VoiceContext'
 import Home from './pages/Home'
 import Pilah from './pages/Pilah'
 import ItemDetail from './pages/ItemDetail'
+import Kontak from './pages/Kontak'
 import Belajar from './features/belajar/Belajar'
 import { SITE } from './config/site'
 
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="pilah" element={<Pilah />} />
             <Route path="pilah/:id" element={<ItemDetail />} />
             <Route path="belajar" element={<Belajar />} />
+            <Route path="kontak" element={<Kontak />} />
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>

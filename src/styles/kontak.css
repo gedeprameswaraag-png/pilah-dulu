@@ -1,0 +1,458 @@
+
+/* ==========================================================
+   KONTAK — PILAH DULU
+   Inspired by Wavespace Contact Page
+   ========================================================== */
+
+.contact-page {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* ================= HERO ================= */
+
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 650px;
+  padding: 65px 0 115px;
+  background:
+    linear-gradient(
+      180deg,
+      #9fc9d3 0%,
+      #c5ded6 48%,
+      #e5ebd5 100%
+    );
+}
+
+/* Dekorasi langit */
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .5;
+  background:
+    radial-gradient(ellipse at 75% 20%, rgba(255,255,255,.65), transparent 30%),
+    radial-gradient(ellipse at 15% 35%, rgba(255,255,255,.55), transparent 25%),
+    linear-gradient(180deg, transparent 60%, rgba(255,255,255,.25));
+}
+
+/* Layout hero */
+
+.contact-hero__layout {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+/* Konten kiri */
+
+.contact-hero__content {
+  max-width: 540px;
+  color: var(--ink);
+}
+
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--moss);
+  font: 800 .72rem var(--font-mono);
+  letter-spacing: .13em;
+}
+
+.contact-hero__content h1 {
+  margin: 22px 0 20px;
+  font: 800 clamp(2.8rem, 5vw, 4.4rem)/1.04 var(--font-head);
+  letter-spacing: -.045em;
+}
+
+.contact-hero__content h1 span {
+  display: block;
+  color: var(--moss);
+}
+
+.contact-hero__content > p {
+  max-width: 440px;
+  margin: 0;
+  color: #34483F;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact-hero__note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--moss);
+}
+
+.contact-hero__note-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--moss);
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+}
+
+/* ================= FORM ================= */
+
+.contact-form {
+  position: relative;
+  padding: 27px;
+  background: rgba(255,255,255,.94);
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(35,65,49,.16);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form__heading {
+  margin-bottom: 20px;
+}
+
+.contact-form__heading > span {
+  color: var(--moss);
+  font: 700 .65rem var(--font-mono);
+  letter-spacing: .14em;
+}
+
+.contact-form__heading h2 {
+  margin: 6px 0 5px;
+  font: 800 1.55rem var(--font-head);
+}
+
+.contact-form__heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+/* Grid form */
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 13px;
+}
+
+.contact-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.contact-field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  font: 700 .78rem var(--font-head);
+}
+
+.contact-field input,
+.contact-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #D9DFD8;
+  border-radius: 9px;
+  outline: none;
+  background: #FAFBF8;
+  color: var(--ink);
+  font: inherit;
+  font-size: .82rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.contact-field input {
+  height: 43px;
+}
+
+.contact-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: var(--moss);
+  box-shadow: 0 0 0 3px rgba(73,108,78,.12);
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #A0A79F;
+}
+
+/* Tombol */
+
+.contact-submit {
+  width: 100%;
+  min-height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin-top: 19px;
+  padding: 12px 20px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--pucuk);
+  color: var(--ink);
+  font: 800 .9rem var(--font-head);
+  cursor: pointer;
+  transition: transform .2s, background .2s, box-shadow .2s;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  background: #C3DDAE;
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.contact-form__footnote {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+/* ================= LANDSCAPE ================= */
+
+/* Bukit belakang */
+
+.contact-hero__landscape {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  height: 165px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.contact-hill {
+  position: absolute;
+  bottom: -85px;
+  width: 120%;
+  height: 170px;
+  border-radius: 50% 50% 0 0;
+}
+
+.contact-hill--back {
+  left: -10%;
+  bottom: -95px;
+  background: #B8D0A2;
+}
+
+.contact-hill--front {
+  left: 15%;
+  bottom: -120px;
+  background: #8EAD77;
+}
+
+/* Pepohonan dekoratif */
+
+.contact-trees {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.contact-tree {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #527E52;
+  box-shadow:
+    8px 7px 0 -3px #527E52,
+    -8px 8px 0 -4px #527E52;
+}
+
+.contact-tree::after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 14px;
+  width: 6px;
+  height: 20px;
+  background: #765C3E;
+  z-index: -1;
+}
+
+.contact-tree--0 {
+  transform: scale(.75);
+  background: #76965D;
+}
+
+.contact-tree--1 {
+  transform: scale(1.3);
+  background: #426D49;
+}
+
+/* ================= BOTTOM INFORMATION ================= */
+
+.contact-bottom {
+  position: relative;
+  z-index: 2;
+  padding-block: 45px 50px;
+  background: var(--paper);
+  border-top: 2px solid var(--ink);
+}
+
+.contact-bottom__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.contact-bottom__eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font: 700 .68rem var(--font-mono);
+  letter-spacing: .1em;
+}
+
+.contact-bottom__about h2 {
+  margin: 0 0 10px;
+  font: 800 clamp(1.5rem, 2.5vw, 2rem)/1.15 var(--font-head);
+  letter-spacing: -.03em;
+}
+
+.contact-bottom__about p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.contact-bottom__details > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--moss);
+  font: 800 clamp(1rem, 2vw, 1.35rem) var(--font-head);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-bottom__details > a:hover {
+  text-decoration: underline;
+}
+
+.contact-bottom__team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.contact-bottom__team > span {
+  display: grid;
+  gap: 4px;
+  font: 700 .78rem var(--font-head);
+}
+
+.contact-bottom__team small {
+  color: var(--muted);
+  font: 400 .7rem var(--font-mono);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .contact-hero {
+    padding-top: 60px;
+    padding-bottom: 130px;
+  }
+
+  .contact-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-hero__content {
+    max-width: 650px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 650px;
+    box-sizing: border-box;
+  }
+
+  .contact-hero__landscape {
+    height: 130px;
+  }
+
+  .contact-bottom__inner {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding-top: 45px;
+    padding-bottom: 115px;
+  }
+
+  .contact-hero__content h1 {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+
+  .contact-hero__content > p {
+    font-size: .9rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field--full {
+    grid-column: auto;
+  }
+
+  .contact-bottom {
+    padding-block: 35px;
+  }
+
+  .contact-bottom__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-bottom__team {
+    gap: 14px;
+  }
+}

@@ -5,15 +5,15 @@ export const SITE = {
   name: 'Pilah Dulu',
   tagline: 'Cari nama barangnya, pahami jenisnya, lalu pilah dari rumah.',
   email: 'tim.mepet@example.com', // tujuan mailto formulir usulan
-  logoImage: null, // isi '/logo.png' (taruh di folder public) untuk mengganti logo SVG bawaan
-  mascotName: 'Pilo',
+  logoImage: '/logo.svg', // isi '/logo.png' (taruh di folder public) untuk mengganti logo SVG bawaan
+  mascotName: 'Ambang',
 
   team: {
     name: 'Mepet',
     members: [
-      { name: 'Anggota 1', role: 'Frontend' },
-      { name: 'Anggota 2', role: 'Konten & data' },
-      { name: 'Anggota 3', role: 'Desain & pengujian' }
+      { name: 'Gede Prameswara A.G', role: 'Frontend' },
+      { name: 'Gede Eka Setyawan', role: 'Konten & data' },
+      { name: 'Juan Bennett Lius Djara', role: 'Desain & pengujian' }
     ]
   },
 
@@ -31,7 +31,8 @@ export const SITE = {
 export const NAV_LINKS = [
   { to: '/', label: 'Beranda', end: true },
   { to: '/pilah', label: 'Pilah' },
-  { to: '/belajar', label: 'Belajar' }
+  { to: '/belajar', label: 'Belajar' },
+  { to: '/kontak', label: 'Kontak' }
 ]
 
 // Warna kategori ada di styles/tokens.css (satu sumber).
