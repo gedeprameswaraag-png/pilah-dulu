@@ -1,8 +1,17 @@
 /* ==========================================================
    KONTAK — PILAH DULU
-   Full background + glassmorphism
-   Semua selector dibatasi pada halaman Kontak.
+   Hero bglaut.svg (sampai form) + form kaca + 2 kartu + footer
    ========================================================== */
+
+/* Hilangkan padding-top global .page (104px) dan margin footer (72px)
+   khusus halaman Kontak, supaya tidak ada jarak dari atas sampai footer. */
+.page:has(.contact-page) {
+  padding-top: 0;
+}
+
+body:has(.contact-page) .footer {
+  margin-top: 0;
+}
 
 .contact-page {
   --contact-green: #426D49;
@@ -11,41 +20,31 @@
 
   position: relative;
   width: 100%;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   color: var(--ink);
   background: var(--paper);
 }
 
-/* HERO: background dimulai dari bagian paling atas viewport */
+/* ---------- HERO (background hanya sampai form) ---------- */
 .contact-page .contact-hero {
   position: relative;
-  isolation: isolate;
   width: 100%;
-  min-height: 650px;
+  min-height: 680px;
   box-sizing: border-box;
   overflow: hidden;
 
-  /* Ruang untuk navbar yang overlay */
-  padding: 145px 0 110px;
+  /* ruang untuk navbar melayang */
+  padding: 150px 0 100px;
 
   background-color: #B7D5D4;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(224, 238, 225, .30),
-      rgba(220, 235, 222, .12)
-    ),
-    url('/bglaut.svg');
-  background-position: center top;
+  background-image: url('/bglaut.svg');
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .contact-page .contact-hero__layout {
-  position: relative;
-  z-index: 3;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
   align-items: center;
@@ -74,13 +73,13 @@
 
 .contact-page .contact-hero__content h1 span {
   display: block;
-  color: var(--contact-green);
+  color: #f2e9c4;
 }
 
 .contact-page .contact-hero__content > p {
   max-width: 440px;
   margin: 0;
-  color: #34483F;
+  color: #2C4036;
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -90,7 +89,7 @@
   align-items: center;
   gap: 10px;
   margin-top: 28px;
-  color: var(--contact-green);
+  color:  #ffffff;
   font-size: .88rem;
   font-weight: 700;
 }
@@ -101,25 +100,24 @@
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border: 1.5px solid var(--contact-green);
+  border: 1.5px solid #ffffff;
   border-radius: 50%;
-  background: rgba(255,255,255,.3);
+  background: rgba(255, 255, 255, .25);
 }
 
-/* FORM KACA */
+/* ---------- FORM KACA (hampir bening) ---------- */
 .contact-page .contact-form {
-  position: relative;
   min-width: 0;
   box-sizing: border-box;
   padding: 29px;
-  background: rgba(255,255,255,.34);
-  border: 1px solid rgba(255,255,255,.68);
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .55);
   border-radius: 23px;
   box-shadow:
-    0 15px 45px rgba(35,65,49,.10),
-    inset 0 1px 0 rgba(255,255,255,.5);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    0 12px 40px rgba(35, 65, 49, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .6);
+  backdrop-filter: blur(10px) saturate(1.15);
+  -webkit-backdrop-filter: blur(10px) saturate(1.15);
 }
 
 .contact-page .contact-form__heading {
@@ -139,7 +137,7 @@
 
 .contact-page .contact-form__heading p {
   margin: 0;
-  color: #52675A;
+  color: #34483F;
   font-size: .82rem;
   line-height: 1.5;
 }
@@ -171,10 +169,10 @@
   width: 100%;
   min-width: 0;
   padding: 12px 13px;
-  border: 1px solid rgba(255,255,255,.85);
+  border: 1px solid rgba(255, 255, 255, .7);
   border-radius: 10px;
   outline: none;
-  background: rgba(255,255,255,.68);
+  background: rgba(255, 255, 255, .3);
   color: var(--ink);
   font: inherit;
   font-size: .82rem;
@@ -193,13 +191,13 @@
 .contact-page .contact-field input:focus,
 .contact-page .contact-field textarea:focus {
   border-color: var(--contact-green);
-  background: rgba(255,255,255,.9);
-  box-shadow: 0 0 0 3px rgba(73,108,78,.12);
+  background: rgba(255, 255, 255, .6);
+  box-shadow: 0 0 0 3px rgba(73, 108, 78, .14);
 }
 
 .contact-page .contact-field input::placeholder,
 .contact-page .contact-field textarea::placeholder {
-  color: #87958A;
+  color: #5F7266;
 }
 
 .contact-page .contact-submit {
@@ -233,93 +231,18 @@
 
 .contact-page .contact-form__footnote {
   margin: 12px 0 0;
-  color: #52675A;
+  color: #34483F;
   text-align: center;
   font-size: .7rem;
 }
 
-/* LANDSCAPE DEKORATIF */
-.contact-page .contact-hero__landscape {
-  position: absolute;
-  z-index: 1;
-  inset: auto 0 0;
-  height: 125px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.contact-page .contact-hill {
-  position: absolute;
-  bottom: -85px;
-  width: 120%;
-  height: 170px;
-  border-radius: 50% 50% 0 0;
-}
-
-.contact-page .contact-hill--back {
-  left: -10%;
-  bottom: -95px;
-  background: #B8D0A2;
-}
-
-.contact-page .contact-hill--front {
-  left: 15%;
-  bottom: -120px;
-  background: #8EAD77;
-}
-
-.contact-page .contact-trees {
-  position: absolute;
-  bottom: 22px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-.contact-page .contact-tree {
-  position: relative;
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  background: #527E52;
-  box-shadow:
-    8px 7px 0 -3px #527E52,
-    -8px 8px 0 -4px #527E52;
-}
-
-.contact-page .contact-tree::after {
-  content: '';
-  position: absolute;
-  top: 23px;
-  left: 14px;
-  z-index: -1;
-  width: 6px;
-  height: 20px;
-  background: #765C3E;
-}
-
-.contact-page .contact-tree--0 {
-  transform: scale(.75);
-  background: #76965D;
-}
-
-.contact-page .contact-tree--1 {
-  transform: scale(1.3);
-  background: #426D49;
-}
-
-/* DUA CARD INFORMASI */
+/* ---------- DUA KARTU INFORMASI ---------- */
 .contact-page .contact-bottom {
-  position: relative;
-  z-index: 2;
   width: 100%;
   margin: 0;
-  padding: 38px 0 42px;
+  padding: 44px 0 48px;
   box-sizing: border-box;
   background: var(--paper);
-  border-top: 1px solid rgba(38,61,50,.15);
 }
 
 .contact-page .contact-bottom__inner {
@@ -337,7 +260,7 @@
   background: #F5F7F0;
   border: 1px solid #E2E9DC;
   border-radius: 22px;
-  box-shadow: 0 5px 20px rgba(35,65,49,.045);
+  box-shadow: 0 5px 20px rgba(35, 65, 49, .05);
 }
 
 .contact-page .contact-bottom__eyebrow {
@@ -397,11 +320,11 @@
   font: 400 .7rem var(--font-mono);
 }
 
-/* RESPONSIVE */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .contact-page .contact-hero {
-    padding-top: 125px;
-    padding-bottom: 115px;
+    min-height: 0;
+    padding: 130px 0 80px;
   }
 
   .contact-page .contact-hero__layout {
@@ -430,10 +353,7 @@
 
 @media (max-width: 600px) {
   .contact-page .contact-hero {
-    min-height: 0;
-    padding-top: 110px;
-    padding-bottom: 95px;
-    background-position: center top;
+    padding: 112px 0 60px;
   }
 
   .contact-page .contact-hero__content h1 {
@@ -457,12 +377,8 @@
     grid-column: auto;
   }
 
-  .contact-page .contact-hero__landscape {
-    height: 100px;
-  }
-
   .contact-page .contact-bottom {
-    padding: 25px 0 30px;
+    padding: 28px 0 32px;
   }
 
   .contact-page .contact-bottom__inner {
@@ -475,8 +391,13 @@
     padding: 23px;
     border-radius: 17px;
   }
-
-  .contact-page .contact-bottom__team {
-    gap: 14px;
-  }
 }
+
+.contact-page .contact-bottom .contact-bottom__inner .contact-bottom__about p {
+  max-width: 390px;
+  margin: 0;
+  color: #F8F5E9 !important;
+  font-size: .86rem;
+  line-height: 1.7;
+}
+

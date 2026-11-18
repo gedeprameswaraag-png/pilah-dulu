@@ -6,14 +6,14 @@ export const SITE = {
   tagline: 'Cari nama barangnya, pahami jenisnya, lalu pilah dari rumah.',
   email: 'gedeprameswaraag@gmail.com', // tujuan mailto formulir usulan
   logoImage: '/logo.svg', // isi '/logo.png' (taruh di folder public) untuk mengganti logo SVG bawaan
-  mascotName: 'Ambang',
+  mascotName: 'Pilo',
 
   team: {
     name: 'Mepet',
     members: [
       { name: 'Gede Prameswara A.G', role: 'Frontend' },
-      { name: 'Gede Eka Setyawan', role: 'Konten & data' },
-      { name: 'Juan Bennett Lius Djara', role: 'Desain & pengujian' }
+      { name: 'Gede Eka Setyawan', role: 'Desain' },
+      { name: 'Juan Bennett Lius Djara', role: 'Pengujian' }
     ]
   },
 

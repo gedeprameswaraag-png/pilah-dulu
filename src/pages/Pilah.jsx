@@ -49,7 +49,7 @@ export default function Pilah() {
         <p className="muted">
           {tab === 'cari'
             ? 'Cari barangnya, lihat cara menanganinya.'
-            : 'Kenali dulu, baru pilah — inilah cerita di balik AMBANG.'}
+            : 'Kenali dulu, baru pilah — inilah cerita di balik Pilah Dulu.'}
         </p>
       </header>
 

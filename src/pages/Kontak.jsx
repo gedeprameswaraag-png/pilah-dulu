@@ -42,19 +42,6 @@ ${form.message}`
   return (
     <main className="contact-page">
       <section className="contact-hero">
-        <div className="contact-hero__landscape" aria-hidden="true">
-          <div className="contact-hill contact-hill--back" />
-          <div className="contact-hill contact-hill--front" />
-
-          <div className="contact-trees">
-            {Array.from({ length: 13 }).map((_, index) => (
-              <span
-                className={`contact-tree contact-tree--${index % 3}`}
-                key={index}
-              />
-            ))}
-          </div>
-        </div>
 
         <div className="container contact-hero__layout">
           <div className="contact-hero__content">

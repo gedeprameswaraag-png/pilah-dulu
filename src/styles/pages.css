@@ -34,10 +34,11 @@
   box-sizing: border-box;
 
   display: flex;
-  align-items: center;
+  /* UBAH: ganti center menjadi flex-start agar tulisan mulai dari atas, bukan tengah layar */
+  align-items: flex-start;
 
-  /* Kompensasi ruang untuk Navbar */
-  padding-top: 190px;
+  /* UBAH: atur jarak dari atas (sesuaikan antara 145px - 165px agar pas di bawah navbar) */
+  padding-top: 155px;
   padding-bottom: 0;
 }
 
